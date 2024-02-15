@@ -1,0 +1,5 @@
+
+3php:S113"'Add a new line at the end of this file.
+aphp:S112"FDefine and throw a dedicated exception instead of using a generic one.(Àıƒæ8³•–ÒÚ1
+m	php:S4833
+"QReplace "require_once" with namespace import mechanism through the "use" keyword.(·¾³8³•–ÒÚ1
