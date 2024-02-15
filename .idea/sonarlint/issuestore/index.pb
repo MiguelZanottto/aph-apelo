@@ -74,3 +74,11 @@ Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 src/delete.php,d\a\da5c3a8c12422282581d283146b5f640571b8cd3
 >
 src/update.php,1\9\192e8268ee2596424d4601b6695e6873c9f11d06
+D
+src/update-image.php,e\a\eaf3684f00e54bec99330f90b44e50dc01241f6c
+I
+src/update_image_file.php,1\5\151086a26d77defeababa946db28552900f77f90
+?
+src/details.php,8\8\8899c7ec8ff6f83d32870b936c5d3bf91b88cc77
+>
+src/create.php,f\5\f5668996c4f0aaf314c8e068e708c1b7759e4a14
