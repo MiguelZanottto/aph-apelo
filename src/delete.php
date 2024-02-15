@@ -3,7 +3,7 @@
 use config\Config;
 use models\Funko;
 use services\FunkosService;
-use src\services\SessionService;
+use services\SessionService;
 
 require_once 'vendor/autoload.php';
 

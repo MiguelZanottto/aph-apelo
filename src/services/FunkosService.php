@@ -116,7 +116,7 @@ class FunkosService
 
         $stmt = $this->pdo->prepare($sql);
 
-        $stmt->bindValue(':nombre', $funko->marca, PDO::PARAM_STR);
+        $stmt->bindValue(':nombre', $funko->nombre, PDO::PARAM_STR);
         $stmt->bindValue(':descripcion', $funko->descripcion, PDO::PARAM_STR);
         $stmt->bindValue(':precio', $funko->precio, PDO::PARAM_STR);
         $stmt->bindValue(':stock', $funko->stock, PDO::PARAM_INT);

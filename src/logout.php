@@ -1,6 +1,6 @@
 <?php
 
-use src\services\SessionService;
+use services\SessionService;
 
 require_once __DIR__ . '/services/SessionService.php';
 

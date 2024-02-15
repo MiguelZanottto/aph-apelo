@@ -81,18 +81,16 @@ DROP SEQUENCE IF EXISTS user_roles_id_seq;
 CREATE SEQUENCE user_roles_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 START 6 CACHE 1;
 
 CREATE TABLE "public"."user_roles" (
-                                       "user_id" bigint,
-                                       "role" character varying(50) DEFAULT 'USER' NOT NULL,
-                                       "id" integer DEFAULT nextval('user_roles_id_seq') NOT NULL,
-                                       CONSTRAINT "PK_8acd5cf26ebd158416f477de799" PRIMARY KEY ("id")
+                                       "user_id" bigint NOT NULL,
+                                       "roles" character varying(50)
 ) WITH (oids = false);
 
-INSERT INTO "user_roles" ("user_id", "role", "id") VALUES
-                                                       (1,	'USER',	1),
-                                                       (1,	'ADMIN',2),
-                                                       (2,	'USER',	3),
-                                                       (3,	'USER',	4),
-                                                       (4,	'USER',	5);
+INSERT INTO "user_roles" ("user_id", "roles") VALUES
+                                                       (1,	'USER'),
+                                                       (1,	'ADMIN'),
+                                                       (2,	'USER'),
+                                                       (3,	'USER'),
+                                                       (4,	'USER');
 
 
 

@@ -2,8 +2,8 @@
 
 
 use config\Config;
-use src\services\SessionService;
-use src\services\UsersService;
+use services\SessionService;
+use services\UsersService;
 
 
 require_once 'vendor/autoload.php';
@@ -19,8 +19,8 @@ $error = '';
 $usersService = new UsersService($config->db);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $username = filter_input(INPUT_POST, 'username',  FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $password = filter_input(INPUT_POST, 'password',  FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if (!$username || !$password) {
         $error = 'Usuario/a o contraseña inválidos.';
@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $error = 'Usuario/a o contraseña inválidos.';
             }
         } catch (Exception $e) {
+
             $error = 'Error en el sistema. Por favor intente más tarde.';
         }
     }

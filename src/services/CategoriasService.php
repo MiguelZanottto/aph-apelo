@@ -1,6 +1,6 @@
 <?php
 
-namespace src\services;
+namespace services;
 
 use models\Categoria;
 use PDO;
