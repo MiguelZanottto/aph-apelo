@@ -1,6 +1,8 @@
 
+fphp:S103>"KSplit this 130 characters long line (which is greater than 120 authorized).(ıÜ¸ğ8ò¾ûÚ1
 :php:S113"'Add a new line at the end of this file.8Ï¡äîÚ1
 m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(™ÕÍ÷8Ï¡äîÚ1
 r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¯Â—üÿÿÿÿ8ß¡äîÚ1
 r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8ß¡äîÚ1
-m	php:S4833O"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ı–Òğ8ß¡äîÚ1
+r	php:S48339"QReplace "require_once" with namespace import mechanism through the "use" keyword.( «·éÿÿÿÿÿ8ß¡äîÚ1
+m	php:S4833U"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ı–Òğ8À—¯ûÚ1

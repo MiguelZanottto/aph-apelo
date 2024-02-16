@@ -44,7 +44,6 @@ class FunkosService
             $funko = new Funko(
                 $row['id'],
                 $row['nombre'],
-                $row['descripcion'],
                 $row['precio'],
                 $row['stock'],
                 $row['imagen'],
@@ -78,7 +77,6 @@ class FunkosService
         $funko = new Funko(
             $row['id'],
             $row['nombre'],
-            $row['descripcion'],
             $row['precio'],
             $row['stock'],
             $row['imagen'],
@@ -106,7 +104,6 @@ class FunkosService
     {
         $sql = "UPDATE funkos SET
             nombre = :nombre,
-            descripcion = :descripcion,
             precio = :precio,
             stock = :stock,
             imagen = :imagen,
@@ -117,7 +114,6 @@ class FunkosService
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindValue(':nombre', $funko->nombre, PDO::PARAM_STR);
-        $stmt->bindValue(':descripcion', $funko->descripcion, PDO::PARAM_STR);
         $stmt->bindValue(':precio', $funko->precio, PDO::PARAM_STR);
         $stmt->bindValue(':stock', $funko->stock, PDO::PARAM_INT);
         $stmt->bindValue(':imagen', $funko->imagen, PDO::PARAM_STR);
@@ -131,13 +127,12 @@ class FunkosService
 
     public function save(Funko $funko)
     {
-        $sql = "INSERT INTO funkos (nombre, descripcion, precio, stock, imagen,  categoria_id, created_at, updated_at)
-            VALUES (:nombre, :descripcion, :precio, :stock, :imagen, :categoria_id, :created_at, :updated_at)";
+        $sql = "INSERT INTO funkos (nombre, precio, stock, imagen,  categoria_id, created_at, updated_at)
+            VALUES (:nombre, :precio, :stock, :imagen, :categoria_id, :created_at, :updated_at)";
 
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->bindValue(':nombre', $funko->nombre, PDO::PARAM_STR);
-        $stmt->bindValue(':descripcion', $funko->descripcion, PDO::PARAM_STR);
         $stmt->bindValue(':precio', $funko->precio, PDO::PARAM_STR);
         $stmt->bindValue(':stock', $funko->stock, PDO::PARAM_INT);
         $funko->imagen = Funko::$IMAGEN_DEFAULT;

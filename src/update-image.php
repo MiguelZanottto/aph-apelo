@@ -44,38 +44,124 @@ if ($id === false) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Actualizar Funko</title>
+    <title>Actualizar Imagen Funko</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="/images/favicon.png" rel="icon" type="image/png">
+    <link href="/images/favicon.webp" rel="icon" type="image/png">
+    <style>
+        body {
+            background-image: url('https://ae01.alicdn.com/kf/Sbb30b217c4274bd8b45097cd1e719ec8b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        dl {
+            margin-bottom: 30px;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        dd {
+            font-size: 24px; /* Tamaño de fuente más grande */
+        }
+
+        .img-container {
+            text-align: center;
+        }
+
+        .img-container img {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 20px 30px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            padding: 20px 30px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <?php require_once 'header.php'; ?>
+    <h1 class="mt-3 mb-3">Actualizar Imagen Funko</h1>
 
-    <h1>Actualizar Imagen Funko</h1>
-
-    <dl class="row">
-        <dt class="col-sm-2">ID:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->id); ?></dd>
-        <dt class="col-sm-2">Nombre:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->nombre); ?></dd>
-        <dt class="col-sm-2">Imagen:</dt>
-        <dd class="col-sm-10"><img alt="Funko Image" class="img-fluid"
-                                   src="<?php echo htmlspecialchars($funko->imagen); ?>"></dd>
-    </dl>
-
-    <form action="update_image_file.php" enctype="multipart/form-data" method="post">
-        <div class="form-group">
-            <label for="imagen">Imagen:</label>
-            <input accept="image/*" class="form-control-file" id="imagen" name="imagen" required type="file">
-            <small class="text-danger"></small>
-            <input name="id" value="<?php echo $id; ?>" type="hidden">
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-4">ID:</dt>
+                <dd class="col-sm-8"><?php echo htmlspecialchars($funko->id); ?></dd>
+                <dt class="col-sm-4">Nombre:</dt>
+                <dd class="col-sm-8"><?php echo htmlspecialchars($funko->nombre); ?></dd>
+            </dl>
         </div>
 
-        <button class="btn btn-primary" type="submit">Actualizar</button>
-        <a class="btn btn-secondary mx-2" href="index.php">Volver</a>
-    </form>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <div class="img-container"><img alt="Funko Image" class="img-fluid"
+                                                src="<?php echo htmlspecialchars($funko->imagen); ?>"></div>
+            </div>
+
+            <form action="update_image_file.php" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label for="imagen">Nueva Imagen:</label>
+                    <input accept="image/*" class="form-control-file" id="imagen" name="imagen" required type="file">
+                    <small class="text-danger"></small>
+                    <input name="id" value="<?php echo $id; ?>" type="hidden">
+                </div>
+                <div class="text-left">
+                    <button class="btn btn-primary" type="submit">Actualizar</button>
+                    <a class="btn btn-secondary mx-2" href="index.php">Volver</a>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </div>
 

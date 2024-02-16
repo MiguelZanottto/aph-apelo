@@ -1,7 +1,7 @@
 
-3php:S113"'Add a new line at the end of this file.
-o	php:S1192$"TDefine a constant instead of duplicating this literal "Location: index.php" 3 times.(òèñ,8Ãß†îÚ1
-r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8Ãß†îÚ1
-m	php:S4833	"QReplace "require_once" with namespace import mechanism through the "use" keyword.(şóÃ†8Ãß†îÚ1
+:php:S113"'Add a new line at the end of this file.8³ÍäúÚ1
+o	php:S1192$"TDefine a constant instead of duplicating this literal "Location: index.php" 3 times.(òèñ,8´ÍäúÚ1
+r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8´ÍäúÚ1
+m	php:S4833	"QReplace "require_once" with namespace import mechanism through the "use" keyword.(şóÃ†8´ÍäúÚ1
 m	php:S4833
-"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Ò½«å8Äß†îÚ1
+"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Ò½«å8´ÍäúÚ1

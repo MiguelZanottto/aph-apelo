@@ -7,7 +7,6 @@ class Funko
     public static $IMAGEN_DEFAULT = 'https://via.placeholder.com/150';
     private $id;
     private $nombre;
-    private $descripcion;
     private $precio;
     private $stock;
     private $imagen;
@@ -17,11 +16,10 @@ class Funko
     private $categoriaNombre;
     private $isDeleted;
 
-    public function __construct($id = null, $nombre = null,  $descripcion = null, $precio = null, $stock = null, $imagen = null,  $createdAt = null, $updatedAt = null, $categoriaId = null, $categoriaNombre = null, $isDeleted = null)
+    public function __construct($id = null, $nombre = null,  $precio = null, $stock = null, $imagen = null,  $createdAt = null, $updatedAt = null, $categoriaId = null, $categoriaNombre = null, $isDeleted = null)
     {
         $this->id = $id;
         $this->nombre = $nombre;
-        $this->descripcion = $descripcion;
         $this->precio = $precio;
         $this->stock = $stock;
         $this->imagen = $imagen ?? self::$IMAGEN_DEFAULT;

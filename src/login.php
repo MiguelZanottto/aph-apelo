@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $error = 'Usuario/a o contraseña inválidos.';
             }
         } catch (Exception $e) {
-
             $error = 'Error en el sistema. Por favor intente más tarde.';
         }
     }
@@ -47,33 +46,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="/images/favicon.png" rel="icon" type="image/png">
+    <link href="/images/favicon.webp" rel="icon" type="image/png">
 </head>
 <body>
 <div class="container" style="width: 50%; margin-left: auto; margin-right: auto;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">
-            <img alt="Logo" class="d-inline-block align-text-top" height="30" src="/images/favicon.png" width="30">
-            Mis Funkos CRUD 2º DAW
-        </a>
-    </nav>
-    <h1>Login</h1>
-    <form action="login.php" method="post">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input class="form-control" id="username" name="username" required type="username">
-            <label for="password">Password:</label>
-            <input class="form-control" id="password" name="password" required type="password">
+    <?
+    require_once 'header.php';
+    ?>
+    <br>
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 500px; border-radius: 10px;">
+            <div class="card-header bg-secondary text-white" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <h1 class="text-center">Login</h1>
+            </div>
+            <div class="card-body">
+                <form action="login.php" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label text-purple">Username:</label>
+                        <input class="form-control" id="username" name="username" required type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-purple">Password:</label>
+                        <input class="form-control" id="password" name="password" required type="password">
+                    </div>
+                    <?php if ($error): ?>
+                        <p class="text-danger"><?php echo htmlspecialchars($error); ?></p>
+                    <?php endif; ?>
+                    <button class="btn btn-secondary btn-block" type="submit">¡Entra ya!</button>
+                </form>
+            </div>
         </div>
-        <?php if ($error): ?>
-            <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
-        <?php endif; ?>
-        <button class="btn btn-primary" type="submit">Login</button>
-    </form>
-</div>
+    </div>
 
 <?php
 require_once 'footer.php';

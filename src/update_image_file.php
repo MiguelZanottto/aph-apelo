@@ -2,7 +2,7 @@
 
 use config\Config;
 use services\FunkosService;
-
+use Ramsey\Uuid\Uuid;
 require_once 'vendor/autoload.php';
 
 require_once __DIR__ . '/config/Config.php';
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit;
             }
 
-            $newName = $funko->uuid . '.' . $extension;
+            $newName = Uuid::uuid4() . '.' . $extension;
 
             move_uploaded_file($tmpPath, $uploadDir . $newName);
 

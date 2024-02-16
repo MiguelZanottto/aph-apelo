@@ -35,33 +35,108 @@ if ($id === false) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detalles del Funko</title>
+    <title>Ver Funko</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="/images/favicon.png" rel="icon" type="image/png">
+    <link href="/images/favicon.webp" rel="icon" type="image/png">
+    <style>
+        body {
+            background-image: url('https://ae01.alicdn.com/kf/Sbb30b217c4274bd8b45097cd1e719ec8b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .row {
+            align-items: center;
+        }
+
+        dl.row {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        dt.col-sm-3 {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        dd.col-sm-9 {
+            color: #343a40;
+        }
+
+        img.img-fluid {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        .img-container {
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 16px 30px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <?php require_once 'header.php'; ?>
 
-    <h1>Detalles del Funko</h1>
-    <dl class="row">
-        <dt class="col-sm-2">ID:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->id); ?></dd>
-        <dt class="col-sm-2">Nombre:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->nombre); ?></dd>
-        <dt class="col-sm-2">Descripción:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->descripcion); ?></dd>
-        <dt class="col-sm-2">Precio:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->precio); ?></dd>
-        <dt class="col-sm-2">Imagen:</dt>
-        <dd class="col-sm-10"><img alt="Funko Image" class="img-fluid"
-                                   src="<?php echo htmlspecialchars($funko->imagen); ?>"></dd>
-        <dt class="col-sm-2">Stock:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->stock); ?></dd>
-        <dt class="col-sm-2">Categoría:</dt>
-        <dd class="col-sm-10"><?php echo htmlspecialchars($funko->categoriaNombre); ?></dd>
-    </dl>
+    <h1 class="mt-3 mb-3">Detalles del Funko</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-3">ID:</dt>
+                <dd class="col-sm-9"><?php echo htmlspecialchars($funko->id); ?></dd>
+                <dt class="col-sm-3">Nombre:</dt>
+                <dd class="col-sm-9"><?php echo htmlspecialchars($funko->nombre); ?></dd>
+                <dt class="col-sm-3">Precio:</dt>
+                <dd class="col-sm-9"><?php echo htmlspecialchars($funko->precio); ?></dd>
+                <dt class="col-sm-3">Stock:</dt>
+                <dd class="col-sm-9"><?php echo htmlspecialchars($funko->stock); ?></dd>
+                <dt class="col-sm-3">Categoría:</dt>
+                <dd class="col-sm-9"><?php echo htmlspecialchars($funko->categoriaNombre); ?></dd>
+            </dl>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="img-container">
+                <img alt="Funko Image" class="img-fluid"
+                     src="<?php echo htmlspecialchars($funko->imagen); ?>">
+            </div>
+        </div>
+    </div>
     <a class="btn btn-primary" href="index.php">Volver</a>
 </div>
 

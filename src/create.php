@@ -33,7 +33,6 @@ $errores = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
-    $descripcion = filter_input(INPUT_POST, 'descripcion', FILTER_SANITIZE_STRING);
     $precio = filter_input(INPUT_POST, 'precio', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $stock = filter_input(INPUT_POST, 'stock', FILTER_SANITIZE_NUMBER_INT);
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_STRING);
@@ -41,10 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($nombre)) {
         $errores['nombre'] = 'El nombre es obligatorio.';
-    }
-
-    if (empty($descripcion)) {
-        $errores['descripcion'] = 'La descripción es obligatoria.';
     }
 
     if (!isset($precio) || $precio === '') {
@@ -67,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $funko = new Funko();
         $funko->nombre = $nombre;
-        $funko->descripcion = $descripcion;
         $funko->precio = $precio;
         $funko->stock = $stock;
         $funko->categoriaId = $categoria->id;
@@ -84,8 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +85,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Crear Funko</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="/images/favicon.png" rel="icon" type="image/png">
+    <link href="/images/favicon.webp" rel="icon" type="image/png">
+    <style>
+        body {
+            background-image: url('https://ae01.alicdn.com/kf/Sbb30b217c4274bd8b45097cd1e719ec8b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -106,13 +152,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input class="form-control" id="nombre" name="nombre" type="text" required>
             <?php if (isset($errores['nombre'])): ?>
                 <small class="text-danger"><?php echo $errores['nombre']; ?></small>
-            <?php endif; ?>
-        </div>
-        <div class="form-group">
-            <label for="descripcion">Descripción:</label>
-            <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
-            <?php if (isset($errores['descripcion'])): ?>
-                <small class="text-danger"><?php echo $errores['descripcion']; ?></small>
             <?php endif; ?>
         </div>
         <div class="form-group">
@@ -149,8 +188,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </div>
 
-        <button class="btn btn-primary" type="submit">Crear</button>
-        <a class="btn btn-secondary mx-2" href="index.php">Volver</a>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Crear</button>
+            <a class="btn btn-secondary mx-2" href="index.php">Volver</a>
+        </div>
     </form>
 </div>
 
