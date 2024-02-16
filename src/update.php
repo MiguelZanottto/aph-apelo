@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $funkoId = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     $categoria = $categoriasService->findByName($categoria);
-
+    $nombre = trim($nombre, " ");
     if (empty($nombre)) {
         $errores['nombre'] = 'El nombre es obligatorio.';
     }
@@ -186,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="form-group">
             <label for="nombre">Nombre:</label>
-            <input class="form-control" id="nombre" name="nombre" type="text" required
+            <input class="form-control" id="nombre" name="nombre" type="text" title="El nombre no puede estar vacio." pattern="^(?!\s*$).+" required
                    value="<?php echo htmlspecialchars($funko->nombre); ?>">
             <?php if (isset($errores['nombre'])): ?>
                 <small class="text-danger"><?php echo $errores['nombre']; ?></small>

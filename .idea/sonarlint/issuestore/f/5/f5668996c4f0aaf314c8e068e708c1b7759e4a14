@@ -1,10 +1,11 @@
 
-:php:S113"'Add a new line at the end of this file.8ðí·÷Ú1
-X	php:S1155="7Use empty() to check whether the array is empty or not.(³á”äûÿÿÿÿ8ðí·÷Ú1
-m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(™ÕÍ÷8ðí·÷Ú1
-r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8ðí·÷Ú1
-m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(þóÃ†8ñí·÷Ú1
-m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Ò½«å8ñí·÷Ú1
-m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(—²èá8ñí·÷Ú1
-n	php:S4833’"QReplace "require_once" with namespace import mechanism through the "use" keyword.(•ˆóþ8ñí·÷Ú1
-s	php:S4833Æ"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Îà±¥øÿÿÿÿ8ñí·÷Ú1
+lphp:S103š"KSplit this 150 characters long line (which is greater than 120 authorized).(¢ìÍÛÿÿÿÿÿ8×Úñ¡Û1
+:php:S113"'Add a new line at the end of this file.8´Ð°˜Û1
+X	php:S1155?"7Use empty() to check whether the array is empty or not.(³á”äûÿÿÿÿ8´Ð°˜Û1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(™ÕÍ÷8´Ð°˜Û1
+r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8´Ð°˜Û1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(þóÃ†8´Ð°˜Û1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Ò½«å8´Ð°˜Û1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(—²èá8´Ð°˜Û1
+n	php:S4833”"QReplace "require_once" with namespace import mechanism through the "use" keyword.(•ˆóþ8´Ð°˜Û1
+s	php:S4833È"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Îà±¥øÿÿÿÿ8´Ð°˜Û1

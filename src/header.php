@@ -88,7 +88,7 @@ $username = $session->isLoggedIn() ? $session->getUserName() : 'Invitado';
                 </li>
             </ul>
             <span class="navbar-text">
-                Usuario: <?php echo htmlspecialchars($username); ?>
+                 Usuario: <?php echo htmlspecialchars($username); ?>
             </span>
         </div>
     </nav>

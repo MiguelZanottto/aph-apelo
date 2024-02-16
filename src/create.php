@@ -38,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $categoria = $categoriasService->findByName($categoria);
 
+    $nombre = trim($nombre, "");
+
     if (empty($nombre)) {
         $errores['nombre'] = 'El nombre es obligatorio.';
     }
@@ -149,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="create.php" method="post">
         <div class="form-group">
             <label for="nombre">Nombre:</label>
-            <input class="form-control" id="nombre" name="nombre" type="text" required>
+            <input class="form-control" id="nombre" name="nombre" type="text" title="El nombre no puede estar vacio." pattern="^(?!\s*$).+"  required>
             <?php if (isset($errores['nombre'])): ?>
                 <small class="text-danger"><?php echo $errores['nombre']; ?></small>
             <?php endif; ?>

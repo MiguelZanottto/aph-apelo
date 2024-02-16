@@ -19,13 +19,13 @@ class UsersService
     }
 
 
-    public function authenticate($username, $password): User
+    public function authenticate($username, $password): ?User
     {
         $user = $this->findUserByUsername($username);
         if ($user && password_verify($password, $user->password)) {
             return $user;
         }
-        throw new Exception('Usuario o contraseña no válidos');
+        return null;
     }
 
     public function findUserByUsername($username)
