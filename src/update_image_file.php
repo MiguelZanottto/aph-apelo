@@ -1,6 +1,7 @@
 <?php
 
 use config\Config;
+use models\Funko;
 use services\FunkosService;
 use Ramsey\Uuid\Uuid;
 require_once 'vendor/autoload.php';
@@ -35,6 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($funko === null) {
                 header('Location: index.php');
                 exit;
+            }
+
+            if ($funko->imagen !== Funko::$IMAGEN_DEFAULT) {
+                $imageUrl = $funko->imagen;
+                $basePath = $config->uploadPath;
+                $imagePathInUrl = parse_url($imageUrl, PHP_URL_PATH);
+                $imageFile = basename($imagePathInUrl);
+                $imageFilePath = $basePath . $imageFile;
+                if (file_exists($imageFilePath)) {
+                    unlink($imageFilePath);
+                }
             }
 
             $newName = Uuid::uuid4() . '.' . $extension;

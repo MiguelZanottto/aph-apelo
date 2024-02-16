@@ -62,8 +62,6 @@ Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 src/login.php,2\7\270d82a0df5b6825992ebad26b4df658b0f60dc5
 =
 src/index.php,8\6\86e98a931c50372ae971b364f65cc1489b5833d7
-8
-src/.env,f\8\f8550963f8b93cc32435b4600b84f3d3def8daa7
 >
 src/header.php,d\3\d35f6356656f77c63a643afc40ef59fdc45a1d00
 >
@@ -82,9 +80,3 @@ I
 src/details.php,8\8\8899c7ec8ff6f83d32870b936c5d3bf91b88cc77
 >
 src/create.php,f\5\f5668996c4f0aaf314c8e068e708c1b7759e4a14
-?
-src/create1.php,1\f\1f201b50347b10d8b2c5805f9ba33770baf71ad2
-C
-src/create/php.java,f\9\f9c353711bfda2b9ce000059591425f38ac072ed
->
-src/index1.php,1\b\1bfe6e86345831e6f1eac8d63ed6bdaa60c71a53

@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $precio = filter_input(INPUT_POST, 'precio', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $stock = filter_input(INPUT_POST, 'stock', FILTER_SANITIZE_NUMBER_INT);
+    $imagen = filter_input(INPUT_POST, 'imagen', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $funkoId = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
@@ -93,6 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $funko->nombre = $nombre;
         $funko->precio = $precio;
         $funko->stock = $stock;
+        $funko->imagen = $imagen;
         $funko->id = $funkoId;
         $funko->categoriaId = $categoria->id;
 

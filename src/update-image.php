@@ -82,7 +82,7 @@ if ($id === false) {
         }
 
         dd {
-            font-size: 24px; /* Tamaño de fuente más grande */
+            font-size: 24px;
         }
 
         .img-container {
