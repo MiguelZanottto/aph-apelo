@@ -52,7 +52,7 @@ $session = $sessionService = SessionService::getInstance();
             <?php foreach ($funkos as $funko): ?>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="<?php echo htmlspecialchars($funko->imagen); ?>" class="card-img-top" alt="Imagen del funko" style="height: 270px; object-fit: cover;">
+                        <img src="<?php echo htmlspecialchars($funko->imagen); ?>" class="card-img-top" alt="Imagen del funko" onerror="this.onerror=null;this.src='../images/image_not_found.jpg'" style="height: 270px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title text-center" style="font-size: 1.5rem; font-weight: bold;"><?php echo htmlspecialchars($funko->nombre); ?></h5>
                             <p class="card-text text-center" style="font-size: 1rem;">

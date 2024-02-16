@@ -145,7 +145,7 @@ if ($id === false) {
             <div class="form-group">
                 <label for="imagen">Imagen:</label>
                 <div class="img-container"><img alt="Funko Image" class="img-fluid"
-                                                src="<?php echo htmlspecialchars($funko->imagen); ?>"></div>
+                                                src="<?php echo htmlspecialchars($funko->imagen); ?>" onerror="this.onerror=null; this.src='../images/image_not_found.jpg'"></div>
             </div>
 
             <form action="update_image_file.php" enctype="multipart/form-data" method="post">

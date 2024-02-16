@@ -132,8 +132,8 @@ if ($id === false) {
         </div>
         <div class="col-md-6 text-center">
             <div class="img-container">
-                <img alt="Funko Image" class="img-fluid"
-                     src="<?php echo htmlspecialchars($funko->imagen); ?>">
+                <img class="img-fluid"
+                     src="<?php echo htmlspecialchars($funko->imagen); ?>" onerror="this.onerror=null; this.src='../images/image_not_found.jpg'">
             </div>
         </div>
     </div>

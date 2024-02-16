@@ -4,7 +4,7 @@ namespace models;
 
 class Funko
 {
-    public static $IMAGEN_DEFAULT = 'https://via.placeholder.com/150';
+    public static $IMAGEN_DEFAULT = 'https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg';
     private $id;
     private $nombre;
     private $precio;
