@@ -88,3 +88,5 @@ H
 src/update_categoria.php,f\2\f29fec0ae826c2d725d7900cf59f309539f31789
 H
 src/create_categoria.php,8\b\8bdfb8c51585590699987eeed138dbd255951682
+@
+src/register.php,7\6\769c1f6ca049e1aab5a69e25fdbf936badcad10a

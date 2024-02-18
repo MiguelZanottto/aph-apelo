@@ -75,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php if ($error): ?>
                         <p class="text-danger"><?php echo htmlspecialchars($error); ?></p>
                     <?php endif; ?>
+                    <p class="text-center">¿Nuevo en Funko Zanotto's? <a href="./register.php">  Crear Cuenta</a></p>
                     <button class="btn btn-secondary btn-block" type="submit">¡Entra ya!</button>
                 </form>
             </div>

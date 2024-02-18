@@ -10,7 +10,15 @@ require_once __DIR__ . '/services/SessionService.php';
 require_once __DIR__ . '/config/Config.php';
 require_once __DIR__ . '/services/CategoriasService.php';
 require_once __DIR__ . '/models/Categoria.php';
-$session = $sessionService = SessionService::getInstance();
+$session = SessionService::getInstance();
+if (!$session->isAdmin()) {
+    echo "<script type='text/javascript'>
+            alert('No tienes permisos para acceder a las categorias');
+            window.location.href = 'index.php';
+          </script>";
+    exit;
+}
+
 ?>
 
 
@@ -41,27 +49,32 @@ $session = $sessionService = SessionService::getInstance();
             $categoriasService = new CategoriasService($config->db);
             $categorias = $categoriasService->findAll();
             ?>
-            <?php foreach ($categorias as $categoria): ?>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title text-center" style="font-size: 1.5rem; font-weight: bold;"><?php echo htmlspecialchars($categoria->nombre); ?></h5>
-                            <p class="card-text text-center" style="font-size: 1rem;">
-                                <strong>ID:</strong> <?php echo htmlspecialchars($categoria->id); ?><br>
-                            </p>
-                            <div class="text-center">
-                                <div class="btn-group" role="group" aria-label="Acciones">
-                                    <a class="btn btn-secondary" href="update_categoria.php?id=<?php echo $categoria->id; ?>">Editar</a>
-                                    <a class="btn btn-danger" href="delete_categoria.php?id=<?php echo $categoria->id; ?>"
-                                       onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoria?');">
-                                        Eliminar
-                                    </a>
-                                </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($categorias as $categoria): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($categoria->id); ?></td>
+                        <td><?php echo htmlspecialchars($categoria->nombre); ?></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Acciones">
+                                <a class="btn btn-secondary" href="update_categoria.php?id=<?php echo $categoria->id; ?>">Editar</a>
+                                <a class="btn btn-danger" href="delete_categoria.php?id=<?php echo $categoria->id; ?>"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoria?');">
+                                    Eliminar
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
 
         <div class="text-center mt-3">

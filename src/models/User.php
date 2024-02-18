@@ -15,7 +15,7 @@ class User
     public $isDeleted;
     public $roles = [];
 
-    public function __construct($id, $username, $password, $nombre, $apellidos, $email, $createdAt, $updatedAt, $isDeleted, $roles = [])
+    public function __construct($id = null, $username = null, $password = null, $nombre = null, $apellidos = null, $email = null, $createdAt = null, $updatedAt = null, $isDeleted = false, $roles = [])
     {
         $this->id = $id;
         $this->username = $username;
