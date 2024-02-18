@@ -76,10 +76,13 @@ $username = $session->isLoggedIn() ? $session->getUserName() : 'Invitado';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Funkos</a>
+                    <a class="nav-link" href="index.php">Tienda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="create.php">Nuevo Funko</a>
+                    <a class="nav-link" href="categorias.php">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.php">Agregar Funko</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $session->isLoggedIn() ? 'logout.php' : 'login.php'; ?>">

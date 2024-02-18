@@ -1,4 +1,9 @@
 
-3php:S113"'Add a new line at the end of this file.
-}	php:S1488/"bImmediately return this expression instead of assigning it to the temporary variable "$categoria".(ªÜ¥8”õ“ÒÚ1
-m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¨»Ë‹8•õ“ÒÚ1
+\	php:S1131"@Remove the useless trailing whitespaces at the end of this line.(ğì¶Ì8ˆóİËÛ1
+a	php:S1131"@Remove the useless trailing whitespaces at the end of this line.(¢‰¶…øÿÿÿÿ8ˆóİËÛ1
+:php:S113"'Add a new line at the end of this file.8ˆóİËÛ1
+d	php:S1192"HDefine a constant instead of duplicating this literal ":nombre" 3 times.(ì¯Ú¢8ˆóİËÛ1
+h	php:S1192 "LDefine a constant instead of duplicating this literal "Y-m-d H:i:s" 3 times.(æ“ëŒ8ˆóİËÛ1
+}	php:S1488_"bImmediately return this expression instead of assigning it to the temporary variable "$categoria".(ªÜ¥8ˆóİËÛ1
+}	php:S1488t"bImmediately return this expression instead of assigning it to the temporary variable "$categoria".(ªÜ¥8ˆóİËÛ1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¨»Ë‹8ˆóİËÛ1

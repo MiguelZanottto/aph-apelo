@@ -47,7 +47,7 @@ $session = $sessionService = SessionService::getInstance();
         <div class="row">
             <?php
             $searchTerm = $_GET['search'] ?? null;
-            $funkosService = new services\FunkosService($config->db);
+            $funkosService = new FunkosService($config->db);
             $funkos = $funkosService->findAllWithCategoryName($searchTerm);
             ?>
             <?php foreach ($funkos as $funko): ?>

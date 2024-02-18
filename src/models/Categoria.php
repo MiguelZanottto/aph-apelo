@@ -36,7 +36,7 @@ class Categoria
         $this->$name = $value;
     }
 
-    private function generateUUID()
+    public function generateUUID()
     {
         return Uuid::uuid4()->toString();
     }

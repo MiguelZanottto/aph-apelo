@@ -1,0 +1,10 @@
+
+lphp:S103"KSplit this 150 characters long line (which is greater than 120 authorized).(¢ìÍÛÿÿÿÿÿ8½µ¥ËÛ1
+:php:S113"'Add a new line at the end of this file.8½µ¥ËÛ1
+X	php:S1155#"7Use empty() to check whether the array is empty or not.(³á”äûÿÿÿÿ8½µ¥ËÛ1
+m	php:S4833
+"QReplace "require_once" with namespace import mechanism through the "use" keyword.(™ÕÍ÷8½µ¥ËÛ1
+r	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(”²§‡øÿÿÿÿ8½µ¥ËÛ1
+m	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(—²èá8½µ¥ËÛ1
+m	php:S4833{"QReplace "require_once" with namespace import mechanism through the "use" keyword.(•ˆóş8½µ¥ËÛ1
+s	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Îà±¥øÿÿÿÿ8½µ¥ËÛ1

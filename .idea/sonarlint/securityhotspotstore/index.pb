@@ -80,3 +80,11 @@ I
 src/details.php,8\8\8899c7ec8ff6f83d32870b936c5d3bf91b88cc77
 >
 src/create.php,f\5\f5668996c4f0aaf314c8e068e708c1b7759e4a14
+B
+src/categorias.php,9\4\9402de6c41cc71bc85c046834fe92aec3275238a
+H
+src/delete_categoria.php,7\6\76e024ca9df72644193f3a82c7bd7226e9c7f2b3
+H
+src/update_categoria.php,f\2\f29fec0ae826c2d725d7900cf59f309539f31789
+H
+src/create_categoria.php,8\b\8bdfb8c51585590699987eeed138dbd255951682
