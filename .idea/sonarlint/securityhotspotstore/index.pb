@@ -90,3 +90,13 @@ H
 src/create_categoria.php,8\b\8bdfb8c51585590699987eeed138dbd255951682
 @
 src/register.php,7\6\769c1f6ca049e1aab5a69e25fdbf936badcad10a
+;
+phpunit.xml,3\5\357499abc6fdfbad45ccc062a427f5f62fb2e3cd
+J
+tests/CategoriaService.php,a\5\a5726f1a1562d21a256d86b442fcf1256e8580f8
+E
+.phpunit.result.cache,2\d\2d329044c6b41bffeb5f66966b019084792bc4ba
+N
+tests/CategoriaServiceTest.php,7\6\767bc5516cc2c48a6d57eb422678c5b0892de15c
+J
+tests/FunkoServiceTest.php,9\b\9b7437186cf6581ad9d9f97fac294f156a93f4ba
