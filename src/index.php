@@ -64,12 +64,16 @@ $session = $sessionService = SessionService::getInstance();
                             <div class="text-center">
                                 <div class="btn-group" role="group" aria-label="Acciones">
                                     <a class="btn btn-primary" href="details.php?id=<?php echo $funko->id; ?>">Detalles</a>
-                                    <a class="btn btn-secondary" href="update.php?id=<?php echo $funko->id; ?>">Editar</a>
-                                    <a class="btn btn-info" href="update-image.php?id=<?php echo $funko->id; ?>">Imagen</a>
-                                    <a class="btn btn-danger" href="delete.php?id=<?php echo $funko->id; ?>"
-                                       onclick="return confirm('¿Estás seguro de que deseas eliminar este funko?');">
-                                        Eliminar
-                                    </a>
+                                    <?php
+                                    if($session->isAdmin()){
+                                        echo   '<a class="btn btn-secondary" href="update.php?id=<?php echo $funko->id; ?>">Editar</a>';
+                                     echo '<a class="btn btn-info" href="update-image.php?id=<?php echo $funko->id; ?>">Imagen</a>';
+                                    echo '<a class="btn btn-danger" href="delete.php?id=<?php echo $funko->id; ?>"
+                                       onclick="return confirm("¿Estás seguro de que deseas eliminar este funko?");">
+                                           Eliminar
+                                    </a>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -77,10 +81,13 @@ $session = $sessionService = SessionService::getInstance();
                 </div>
             <?php endforeach; ?>
         </div>
-
-        <div class="text-center mt-3">
+        <?php
+        if($session->isAdmin()){
+            echo   '<div class="text-center mt-3">
             <a class="btn btn-success btn-lg" href="create.php">Crear Nuevo Funko</a>
-        </div>
+            </div>';
+        }
+        ?>
 
         <p class="mt-4 text-center" style="font-size: smaller;">
             <?php

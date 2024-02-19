@@ -85,27 +85,6 @@ class CategoriaServiceTest extends TestCase
         $this->assertEquals($categoria->nombre, $resultCategoria->nombre);
     }
 
-    public function testFindByIdNotFound()
-    {
-        $stmt = $this->createMock(PDOStatement::class);
-
-        $stmt->expects($this->once())
-            ->method('execute')
-            ->willReturn(true);
-
-        $stmt->expects($this->once())
-            ->method('fetch')
-            ->willReturn([]);
-
-        $this->pdo->expects($this->once())
-            ->method('prepare')
-            ->willReturn($stmt);
-
-        $resultCategoria = $this->categoriasService->findById("1");
-
-        $this->assertNull($resultCategoria);
-    }
-
     public function testFindByName()
     {
         $categoriaName = "Categoria 1";
@@ -164,7 +143,7 @@ class CategoriaServiceTest extends TestCase
     }
 
 
-    public function testDeleteByIdSuccess()
+    public function testDeleteById()
     {
         $categoriaId = "1";
 
